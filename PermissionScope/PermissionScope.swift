@@ -1288,7 +1288,7 @@ typealias resultsForConfigClosure     = ([PermissionResult]) -> Void
                 NotificationCenter.default.addObserver(self, selector: #selector(self.appForegroundedAfterSettings), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
                 
                 let settingsUrl = URL(string: UIApplicationOpenSettingsURLString)
-                UIApplication.shared.openURL(settingsUrl!)
+                UIApplication.shared.open(settingsUrl!, options: [:], completionHandler: nil)
         }))
         
         DispatchQueue.main.async {
