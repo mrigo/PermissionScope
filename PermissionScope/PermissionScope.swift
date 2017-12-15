@@ -112,7 +112,7 @@ typealias resultsForConfigClosure     = ([PermissionResult]) -> Void
     
     - parameter completion: Closure used to send the result of the check.
     */
-    func allAuthorized(_ completion: @escaping (Bool) -> Void ) {
+    public func allAuthorized(_ completion: @escaping (Bool) -> Void ) {
         getResultsForConfig{ results in
             let result = results
                 .first { $0.status != .authorized }
